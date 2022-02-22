@@ -1,1 +1,17 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 100vh;
+  width: 100%;
+}
 
+.cards-wrapper {
+  width: clamp(20rem, 90vw, 40rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 16px;
+  row-gap: 16px;
+}
