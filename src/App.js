@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     async function getDataFromApi() {
-      await fetch('https://jsonplaceholder.typicode.com/usersfsdfdssfd')
+      await fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => {
           if (res.ok) {
             return res.json()
@@ -16,7 +16,10 @@ const App = () => {
             throw new Error('Something went wrong')
           }
         })
-        .then((data) => setData(data) && setStatus('loaded'))
+        .then((data) => {
+          setData(data)
+          setStatus('loaded')
+        })
         .catch(() => setStatus('error'))
     }
     getDataFromApi()
