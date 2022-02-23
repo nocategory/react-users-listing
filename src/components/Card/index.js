@@ -7,7 +7,9 @@ function Card({ user }) {
   }, [user])
   return (
     <div className="card">
-      <p>TEST</p>
+      <p>{user.username}</p>
+      <p>{user.name}</p>
+      <a href={`https://${user.website}`}>{user.website}</a>
     </div>
   )
 }
