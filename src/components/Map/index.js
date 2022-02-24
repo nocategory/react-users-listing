@@ -7,11 +7,11 @@ import './index.css'
 function Map({ users }) {
   return (
     <MapContainer
-      center={[51.505, -0.09]}
+      center={[0, 0]}
       zoom={2}
       style={{
-        width: 'clamp(20rem, 90vw, 40rem)',
-        height: '400px',
+        width: 'clamp(20rem, 90vw, 50rem)',
+        height: '500px',
         marginBottom: '2vh',
       }}
     >

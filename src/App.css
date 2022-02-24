@@ -9,7 +9,7 @@
 }
 
 .cards-wrapper {
-  width: clamp(20rem, 90vw, 40rem);
+  width: clamp(20rem, 90vw, 50rem);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: auto;
