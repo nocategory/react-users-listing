@@ -1,6 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import Card from './components/Card'
+import Map from './components/Map'
 
 const App = () => {
   const [data, setData] = useState([])
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* <Map /> */}
+      <Map />
       <div className="cards-wrapper">
         {(() => {
           switch (status) {
