@@ -25,10 +25,9 @@ const App = () => {
     }
     getDataFromApi()
   }, [])
-
   return (
     <div className="app">
-      <Map />
+      {status === 'loaded' && <Map users={data} />}
       <div className="cards-wrapper">
         {(() => {
           switch (status) {
