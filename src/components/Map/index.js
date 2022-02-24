@@ -6,9 +6,6 @@ import '/node_modules/leaflet/dist/images/marker-icon.png'
 import './index.css'
 
 function Map({ users }) {
-  useEffect(() => {
-    console.log(users)
-  }, [])
   return (
     <MapContainer
       center={[51.505, -0.09]}
