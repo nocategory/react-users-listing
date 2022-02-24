@@ -1,6 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import Card from './components/Card'
+import Map from './components/Map'
 
 const App = () => {
   const [data, setData] = useState([])
@@ -24,10 +25,9 @@ const App = () => {
     }
     getDataFromApi()
   }, [])
-
   return (
     <div className="app">
-      {/* <Map /> */}
+      {status === 'loaded' && <Map users={data} />}
       <div className="cards-wrapper">
         {(() => {
           switch (status) {
