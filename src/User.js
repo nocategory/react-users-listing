@@ -28,7 +28,13 @@ function User() {
   }, [id])
   return (
     <div>
-      {status === 'loaded' && <Map users={data} />}
+      {status === 'loaded' && (
+        <Map
+          users={data}
+          zoom={18}
+          center={[data[0].address.geo.lat, data[0].address.geo.lng]}
+        />
+      )}
       <div className="cards-wrapper">
         {(() => {
           switch (status) {

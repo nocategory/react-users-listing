@@ -1,7 +1,7 @@
-p,
-h1,
-h2,
-ul,
-li {
+.cards-wrapper p,
+.cards-wrapper h1,
+.cards-wrapper h2,
+.cards-wrapper ul,
+.cards-wrapper li {
   color: #fff;
 }

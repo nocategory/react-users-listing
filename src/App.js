@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Card from './components/Card'
 import Map from './components/Map'
 

@@ -1,14 +1,19 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import '/node_modules/leaflet/dist/images/marker-icon.png'
 import './index.css'
+import { useEffect } from 'react'
 
-function Map({ users }) {
+function Map({ users, zoom = 2, center = [0, 0] }) {
+  useEffect(() => {
+    console.log(center)
+    console.log(zoom)
+  }, [center, zoom])
   return (
     <MapContainer
-      center={[0, 0]}
-      zoom={2}
+      center={center}
+      zoom={zoom}
+      maxZoom={18}
       style={{
         width: 'clamp(20rem, 90vw, 50rem)',
         height: '500px',
