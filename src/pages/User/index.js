@@ -45,6 +45,10 @@ function User() {
               return data.map((user) => (
                 <ul key={user.id}>
                   <li>
+                    <b>ID: </b>
+                    {user.id}
+                  </li>
+                  <li>
                     <b>Name: </b>
                     {user.name}
                   </li>
