@@ -6,9 +6,9 @@ import { useEffect } from 'react'
 
 function Map({ users, zoom = 2, center = [0, 0] }) {
   useEffect(() => {
-    console.log(center)
-    console.log(zoom)
-  }, [center, zoom])
+    console.log('users')
+    console.log(users)
+  }, [])
   return (
     <MapContainer
       center={center}

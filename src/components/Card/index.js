@@ -5,7 +5,7 @@ function Card({ user }) {
     <div className="card">
       <p>{user.username}</p>
       <p>{user.name}</p>
-      <a href={`https://${user.website}`}>{user.website}</a>
+      <p>{user.website}</p>
     </div>
   )
 }

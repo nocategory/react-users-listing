@@ -1,38 +1,14 @@
 import Map from '../../components/Map'
-import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import './index.css'
 
-function User() {
-  const [data, setData] = useState([])
-  const [status, setStatus] = useState('loading')
-  let { id } = useParams()
-
-  useEffect(() => {
-    async function getDataFromApi() {
-      await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-        .then((res) => {
-          if (res.ok) {
-            return res.json()
-          } else {
-            throw new Error('Something went wrong')
-          }
-        })
-        .then((apiData) => {
-          setData([apiData]) // data is an array of one user, since Map is using .map()
-          setStatus('loaded')
-        })
-        .catch(() => setStatus('error'))
-    }
-    getDataFromApi()
-  }, [id])
+function User({ data, status }) {
   return (
     <div>
       {status === 'loaded' && (
         <Map
           users={data}
           zoom={18}
-          center={[data[0].address.geo.lat, data[0].address.geo.lng]}
+          center={[data.address.geo.lat, data.address.geo.lng]}
         />
       )}
       <div className="cards-wrapper">
@@ -43,6 +19,10 @@ function User() {
             case 'loaded':
               return data.map((user) => (
                 <ul key={user.id}>
+                  <li>
+                    <b>ID: </b>
+                    {user.id}
+                  </li>
                   <li>
                     <b>Name: </b>
                     {user.name}
