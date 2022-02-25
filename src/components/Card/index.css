@@ -17,6 +17,7 @@
 .card p {
   color: white;
   text-align: center;
+  text-decoration: none;
 }
 
 a {
