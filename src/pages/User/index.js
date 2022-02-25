@@ -2,6 +2,7 @@ import Map from '../../components/Map'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './index.css'
+import '../Index/index.css'
 
 function User() {
   const [data, setData] = useState([])
@@ -27,7 +28,7 @@ function User() {
     getDataFromApi()
   }, [id])
   return (
-    <div>
+    <div className="app">
       {status === 'loaded' && (
         <Map
           users={data}
@@ -35,7 +36,7 @@ function User() {
           center={[data[0].address.geo.lat, data[0].address.geo.lng]}
         />
       )}
-      <div className="cards-wrapper">
+      <div className="cards">
         {(() => {
           switch (status) {
             case 'loading':

@@ -5,6 +5,9 @@ import User from './pages/User'
 function Root() {
   return (
     <div>
+      <h1 style={{ textAlign: 'center', color: '#fff' }}>
+        react-users-listing
+      </h1>
       <Outlet />
       <Routes>
         <Route index element={<Index />} />

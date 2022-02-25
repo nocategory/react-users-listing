@@ -5,10 +5,6 @@ import './index.css'
 import { useEffect } from 'react'
 
 function Map({ users, zoom = 2, center = [0, 0] }) {
-  useEffect(() => {
-    console.log(center)
-    console.log(zoom)
-  }, [center, zoom])
   return (
     <MapContainer
       center={center}
@@ -18,6 +14,8 @@ function Map({ users, zoom = 2, center = [0, 0] }) {
         width: 'clamp(20rem, 90vw, 50rem)',
         height: '500px',
         marginBottom: '2vh',
+        borderRadius: '0.5rem',
+        border: '1px solid #495057',
       }}
     >
       <TileLayer

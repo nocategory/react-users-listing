@@ -1,7 +1,14 @@
-.cards-wrapper p,
-.cards-wrapper h1,
-.cards-wrapper h2,
-.cards-wrapper ul,
-.cards-wrapper li {
+.cards p,
+.cards h1,
+.cards h2,
+.cards ul,
+.cards li {
   color: #fff;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
 }
