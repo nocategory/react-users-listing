@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Card from './components/Card'
 import Map from './components/Map'
 
@@ -34,7 +35,11 @@ const App = () => {
             case 'loading':
               return <p>Loading data *beep boop*</p>
             case 'loaded':
-              return data.map((user) => <Card key={user.id} user={user} />)
+              return data.map((user) => (
+                <Link to={`/user/${user.id}`} key={user.id}>
+                  <Card key={user.id} user={user} />
+                </Link>
+              ))
             default:
               return <p>Something went wrong</p>
           }
