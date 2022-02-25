@@ -1,7 +1,7 @@
-import Map from './components/Map'
+import Map from '../../components/Map'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import './User.css'
+import './index.css'
 
 function User() {
   const [data, setData] = useState([])

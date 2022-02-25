@@ -1,13 +1,13 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
-import App from './App'
-import User from './User'
+import Index from './pages/Index'
+import User from './pages/User'
 
 function Root() {
   return (
     <div>
       <Outlet />
       <Routes>
-        <Route index element={<App />} />
+        <Route index element={<Index />} />
         <Route path="/user/:id" element={<User />} />
       </Routes>
     </div>

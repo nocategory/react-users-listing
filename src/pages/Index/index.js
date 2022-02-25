@@ -1,10 +1,10 @@
-import './App.css'
+import './index.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Card from './components/Card'
-import Map from './components/Map'
+import Card from '../../components/Card'
+import Map from '../../components/Map'
 
-const App = () => {
+const Index = () => {
   const [data, setData] = useState([])
   const [status, setStatus] = useState('loading')
 
@@ -49,4 +49,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Index

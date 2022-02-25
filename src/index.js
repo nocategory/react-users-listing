@@ -2,14 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
-import App from './App'
+import Index from './pages/Index'
 import Root from './Root'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Root>
-        <App />
+        <Index />
       </Root>
     </BrowserRouter>
   </React.StrictMode>,
