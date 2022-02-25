@@ -2,7 +2,6 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import './index.css'
-import { useEffect } from 'react'
 
 function Map({ users, zoom = 2, center = [0, 0] }) {
   return (
